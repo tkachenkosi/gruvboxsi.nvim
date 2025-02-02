@@ -77,7 +77,8 @@ Gruvbox.palette = {
   -- это было - подсведка текущей строки
   -- dark1 = "#3c3836",
   -- dark1 = "#353230",
-  dark1 = "#2b2b2b",
+  -- dark1 = "#2b2b2b",
+  dark1 = "#333333",
   dark2 = "#504945",
   -- это было - подсведка парных скобок и блока выдиления
   -- dark3 = "#665c54",
@@ -1036,7 +1037,7 @@ Gruvbox.load = function()
   if vim.g.colors_name then
     vim.cmd.hi("clear")
   end
-  vim.g.colors_name = "gruvboxmy"
+  vim.g.colors_name = "gruvboxsi"
   vim.o.termguicolors = true
 
   local groups = get_groups()
