@@ -72,7 +72,10 @@ Gruvbox.config = {
 ---@class GruvboxPalette
 Gruvbox.palette = {
   dark0_hard = "#1d2021",
-  dark0 = "#282828",
+
+  -- dark0 = "#282828",
+  dark0 = "#521414",
+
   dark0_soft = "#32302f",
   -- это было - подсведка текущей строки
   -- dark1 = "#3c3836",
@@ -81,9 +84,8 @@ Gruvbox.palette = {
 	-- цвет фона для моих окон sessions, buffers
   dark1 = "#333333",
 
-  dark2 = "#521414",
 	-- был это вариант
-  -- dark2 = "#504945",
+  dark2 = "#504945",
 
   -- это было - подсведка парных скобок и блока выдиления
   -- dark3 = "#665c54",
