@@ -71,7 +71,7 @@ Gruvbox.config = {
 -- main gruvbox color palette
 ---@class GruvboxPalette
 Gruvbox.palette = {
-  dark_cline = "#442222",
+  dark_cline = "#333333",
 
   dark0_hard = "#1d2021",
   dark0 = "#282828",
