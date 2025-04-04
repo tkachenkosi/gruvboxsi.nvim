@@ -71,7 +71,8 @@ Gruvbox.config = {
 -- main gruvbox color palette
 ---@class GruvboxPalette
 Gruvbox.palette = {
-  dark_cline = "#333333",
+  -- подсведка текущей строки
+  dark_cline = "#2b2b2b",
 
   dark0_hard = "#1d2021",
   dark0 = "#282828",
