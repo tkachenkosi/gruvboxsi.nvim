@@ -72,11 +72,11 @@ Gruvbox.config = {
 ---@class GruvboxPalette
 Gruvbox.palette = {
   dark0_hard = "#1d2021",
+  dark0 = "#282828",
 
-  -- dark0 = "#282828",
-  dark0 = "#521414",
+  -- dark0_soft = "#32302f",
+  dark0_soft = "#521414",
 
-  dark0_soft = "#32302f",
   -- это было - подсведка текущей строки
   -- dark1 = "#3c3836",
   -- dark1 = "#353230",
