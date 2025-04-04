@@ -71,6 +71,8 @@ Gruvbox.config = {
 -- main gruvbox color palette
 ---@class GruvboxPalette
 Gruvbox.palette = {
+  dark_cline = "#442222",
+
   dark0_hard = "#1d2021",
   dark0 = "#282828",
   dark0_soft = "#32302f",
@@ -93,6 +95,7 @@ Gruvbox.palette = {
   -- dark3 = "#006699",
   -- dark3 = "#333399",
   dark4 = "#7c6f64",
+  light_cline = "#ebdbb2",
   light0_hard = "#f9f5d7",
   light0 = "#fbf1c7",
   light0_soft = "#f2e5bc",
@@ -188,6 +191,7 @@ local function get_colors()
       dark_aqua = p.dark_aqua,
       gray = p.gray,
       gray2 = p.gray2,
+      cline = p.dark_cline,
     },
     light = {
       bg0 = p.light0,
@@ -218,6 +222,7 @@ local function get_colors()
       dark_aqua = p.light_aqua,
       gray = p.gray,
       gray2 = p.gray2,
+      cline = p.light_cline,
     },
   }
 
@@ -247,6 +252,7 @@ local function get_groups()
       colors.fg4,
       colors.gray,
       colors.gray2,
+      colors.cline,
       colors.red,
       colors.green,
       colors.yellow,
@@ -311,7 +317,11 @@ local function get_groups()
     Normal = config.transparent_mode and { fg = colors.fg1, bg = nil } or { fg = colors.fg1, bg = colors.bg0 },
     NormalFloat = config.transparent_mode and { fg = colors.fg1, bg = nil } or { fg = colors.fg1, bg = colors.bg1 },
     NormalNC = config.dim_inactive and { fg = colors.fg0, bg = colors.bg1 } or { link = "Normal" },
-    CursorLine = { bg = colors.bg1 },
+
+		-- может это цвет текущей строки
+    -- CursorLine = { bg = colors.bg1 },
+    CursorLine = { bg = colors.cline },
+
     CursorColumn = { link = "CursorLine" },
     TabLineFill = { fg = colors.bg4, bg = colors.bg1, reverse = config.invert_tabline },
     TabLineSel = { fg = colors.green, bg = colors.bg1, reverse = config.invert_tabline },
