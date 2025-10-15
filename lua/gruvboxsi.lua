@@ -159,8 +159,8 @@ local function get_colors()
     p[color] = hex
   end
 
-  local bg = vim.o.background
-  local contrast = config.contrast
+  local bg = vim.o.background				-- тип фона dark, light
+  local contrast = config.contrast	-- насыщеность "hard" | "soft" | ""
 
   local color_groups = {
     dark = {
@@ -227,6 +227,7 @@ local function get_colors()
     },
   }
 
+	-- уточнение цвета фона (dark0, dark0_hard, dark0_soft, light0, light0_hard, light0_soft)
   if contrast ~= nil and contrast ~= "" then
     color_groups[bg].bg0 = p[bg .. "0_" .. contrast]
     color_groups[bg].dark_red = p[bg .. "_red_" .. contrast]
