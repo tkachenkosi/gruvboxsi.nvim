@@ -104,6 +104,10 @@ Gruvbox.palette = {
   light2 = "#d5c4a1",
   light3 = "#bdae93",
   light4 = "#a89984",
+
+	-- для номеров строк (немного темнее)
+	light14 = "#554c44",
+
   bright_red = "#fb4934",
   bright_green = "#b8bb26",
   -- bright_green = "#ff33ff",
@@ -144,10 +148,16 @@ Gruvbox.palette = {
   light_aqua_hard = "#e6e9c1",
   light_aqua = "#e8e5b5",
   light_aqua_soft = "#e1dbac",
+
+	-- folder, comment (строка статуса, комментарии)
   gray = "#928374",
   -- gray2 = "#336699",
 	-- новый цвет для сообщений с предупреждениями
-  gray2 = "#2f5e8c",
+  -- gray2 = "#2f5e8c",
+  gray2 = "#3e54ba",
+
+	-- для номеров строк (немного темнее)
+	dark14 = "#554c44",
 }
 
 -- get a hex list of gruvbox colors based on current bg and constrast config
@@ -169,6 +179,7 @@ local function get_colors()
       bg2 = p.dark2,
       bg3 = p.dark3,
       bg4 = p.dark4,
+      bg14 = p.dark14,
       fg0 = p.light0,
       fg1 = p.light1,
       fg2 = p.light2,
@@ -200,6 +211,7 @@ local function get_colors()
       bg2 = p.light2,
       bg3 = p.light3,
       bg4 = p.light4,
+      bg14 = p.light14,
       fg0 = p.dark0,
       fg1 = p.dark1,
       fg2 = p.dark2,
@@ -358,7 +370,11 @@ local function get_groups()
     ModeMsg = { link = "GruvboxYellowBold" },
     Question = { link = "GruvboxOrangeBold" },
     WarningMsg = { link = "GruvboxRedBold" },
-    LineNr = { fg = colors.bg4 },
+
+		-- номера строк
+    -- LineNr = { fg = colors.bg4 },
+    LineNr = { fg = colors.bg14 },
+
     SignColumn = config.transparent_mode and { bg = nil } or { bg = colors.bg1 },
     Folded = { fg = colors.gray, bg = colors.bg1, italic = config.italic.folds },
     FoldColumn = config.transparent_mode and { fg = colors.gray, bg = nil } or { fg = colors.gray, bg = colors.bg1 },
