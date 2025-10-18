@@ -157,7 +157,7 @@ Gruvbox.palette = {
   gray2 = "#3e54ba",
 
 	-- для номеров строк (немного темнее)
-	dark14 = "#554c44",
+	dark14 = "#5e544c",
 }
 
 -- get a hex list of gruvbox colors based on current bg and constrast config
