@@ -108,6 +108,7 @@ Gruvbox.palette = {
 	-- для номеров строк (немного темнее)
 	light14 = "#554c44",
 
+  my1_func = "#0084ff",		-- для подсветки (func, return, ..)
   bright_red = "#fb4934",
   bright_green = "#b8bb26",
   -- bright_green = "#ff33ff",
@@ -185,6 +186,7 @@ local function get_colors()
       fg2 = p.light2,
       fg3 = p.light3,
       fg4 = p.light4,
+			my1 = p.my_func,
       red = p.bright_red,
       green = p.bright_green,
       yellow = p.bright_yellow,
@@ -217,6 +219,7 @@ local function get_colors()
       fg2 = p.dark2,
       fg3 = p.dark3,
       fg4 = p.dark4,
+			my1 = p.my_func,
       red = p.faded_red,
       green = p.faded_green,
       yellow = p.faded_yellow,
@@ -294,6 +297,7 @@ local function get_groups()
     GruvboxBg3 = { fg = colors.bg3 },
     GruvboxBg4 = { fg = colors.bg4 },
     GruvboxRed = { fg = colors.red },
+    GruvboxMy1 = { fg = colors.my1 },
     GruvboxRedBold = { fg = colors.red, bold = config.bold },
     GruvboxGreen = { fg = colors.green },
     GruvboxGreenBold = { fg = colors.green, bold = config.bold },
@@ -387,13 +391,17 @@ local function get_groups()
     Todo = { fg = colors.bg0, bg = colors.yellow, bold = config.bold, italic = config.italic.comments },
     Done = { fg = colors.orange, bold = config.bold, italic = config.italic.comments },
     Error = { fg = colors.red, bold = config.bold, reverse = config.inverse },
+
+		-- определение ключевыых слов (if else ))
     Statement = { link = "GruvboxRed" },
-    Conditional = { link = "GruvboxRed" },
+    -- Conditional = { link = "GruvboxRed" },
+    Conditional = { link = "GruvboxMy1" },
     Repeat = { link = "GruvboxRed" },
     Label = { link = "GruvboxRed" },
     Exception = { link = "GruvboxRed" },
     Operator = { fg = colors.orange, italic = config.italic.operators },
     Keyword = { link = "GruvboxRed" },
+
     Identifier = { link = "GruvboxBlue" },
     -- Function = { link = "GruvboxGreenBold" },
     -- Function = { link = "GruvboxYellowBold" },
