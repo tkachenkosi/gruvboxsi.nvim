@@ -405,7 +405,11 @@ local function get_groups()
     Identifier = { link = "GruvboxBlue" },
     -- Function = { link = "GruvboxGreenBold" },
     -- Function = { link = "GruvboxYellowBold" },
-    Function = { link = "GruvboxBlueBold" },
+
+		-- имена функций и методов (добавлено)
+    -- Function = { link = "GruvboxBlueBold" },
+    Function = { link = "GruvboxBlue" },
+
     -- Function = { link = "GruvboxPurpleBold" },
     -- Function = { link = "GruvboxAquaBold" },
     -- Function = { link = "GruvboxOrangeBold" },
